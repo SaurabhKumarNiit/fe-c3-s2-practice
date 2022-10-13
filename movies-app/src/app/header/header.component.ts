@@ -27,6 +27,4 @@ export class HeaderComponent implements OnInit {
     this.searchText = '';
     this.movies = MOVIES;
   }
-
-
 }

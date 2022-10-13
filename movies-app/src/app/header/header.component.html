@@ -1,15 +1,26 @@
+
+<div id="Body">
+    <h4 id="head">Box Office</h4>
+    <h3>Trending Movies</h3>
 <div class="search-box">
-    <input type="text" placeholder="Search Fruit" [(ngModel)]="searchText" />
+    <input type="text" placeholder="Search Movies" [(ngModel)]="searchText" />
     <button (click)="search()" type="button">Go</button>
     <button (click)="reset()" type="button">Clear</button>
 </div>
 
 <div class="card" *ngFor="let movie of movies">
-    <img src="../../../../p2-display-movies/resources/doctor strange.jpg" alt={{movie.movieTitle}}>
+    <!-- <img src="../../../../p2-display-movies/resources/{{movie.movieTitle}}.jpg" alt={{movie.movieTitle}}> -->
+    <img id="content" src="../../assets/images/{{movie.movieTitle}}.jpg" alt="">
+    
     <div class="card-content">
-        <h4>{{movie.movieTitle}}</h4>
-        <span>{{movie.genre}}  {{movie?.yearOfRelease}} </span>
+        <span style="width: 50px; height: 20px; display: flex;"><img src="../../assets/images/rating.jpg" alt="">{{movie.rating}}</span>
+        <div id="movieInfo">   
+        <h4 style="text-transform:uppercase">{{movie.movieTitle}}</h4>
+        <span>{{movie.genre}} </span>
+        <span id="year"> {{movie?.yearOfRelease}}</span> 
+        </div>
      </div>
 </div>
+</div>
 
-<!-- {{movie.movieTitle}} -->
+<!--  --> 
